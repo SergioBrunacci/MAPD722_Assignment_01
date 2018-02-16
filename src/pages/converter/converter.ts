@@ -24,7 +24,11 @@ export class ConverterPage {
     else if (btn == 'MilKil') {
       this.result = this.result/0.62137; 
     } else {
-      this.result += btn;
+      if (this.result == 0){
+        this.result = btn;
+      }else{
+        this.result += btn;
+      }
     }
   }
 }
